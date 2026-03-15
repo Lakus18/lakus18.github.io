@@ -121,12 +121,15 @@ ul li::before {
 
 
 footer {
-  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  text-align: left;
   padding: 60px;
   background: #000;
   font-size: 0.9rem;
   letter-spacing: 2px;
   text-transform: uppercase;
+  border-top: 2px solid var(--audi-red);
+  color: #8888;
 }
 
 
