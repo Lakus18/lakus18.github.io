@@ -1,3 +1,147 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Inter:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Inter:wght@300;400;700&display=swap');
+
+/* kolory */
+:root {
+  --audi-red: #f50537;
+  --dark-bg: #0a0a0a;
+  --card-bg: rgba(255, 255, 255, 0.03);
+}
+
 body {
-  background-color: #ecfbe6;
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  background: var(--dark-bg);
+  color: #e0e0e0;
+  line-height: 1.6;
+}
+
+
+header {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle at center, #1a1a1a 0%, #000000 100%);
+  text-align: center;
+  padding: 20px;
+}
+
+header h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(3rem, 10vw, 6rem);
+  text-transform: uppercase;
+  letter-spacing: -2px;
+  color: transparent;
+  -webkit-text-stroke: 1px white;
+  margin: 10px 0;
+  transition: 0.5s;
+}
+
+
+.logo {
+  width: 120px;
+  filter: grayscale(1) brightness(2);
+  transition: 0.3s;
+}
+
+
+main {
+  max-width: 1400px;
+  margin: auto;
+  padding: 50px 20px;
+}
+
+
+.block {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 150px;
+  padding: 40px;
+  background: var(--card-bg);
+  border-left: 4px solid var(--audi-red);
+  transition: transform 0.4s ease;
+}
+
+
+
+
+.block:nth-child(even) {
+  flex-direction: row-reverse;
+  border-left: none;
+  border-right: 4px solid var(--audi-red);
+}
+
+
+.block h2, .block h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.5rem;
+  color: var(--audi-red);
+  flex: 1 1 400px;
+}
+
+.block p {
+  flex: 1 1 400px;
+  font-size: 1.1rem;
+  color: #bbb;
+}
+
+
+.block img {
+  flex: 1 1 500px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 0;
+  box-shadow: 20px 20px 0px var(--audi-red);
+  filter: saturate(1.2);
+}
+
+
+ul {
+  list-style: none;
+  padding: 0;
+  flex: 1 1 100%;
+}
+
+ul li {
+  padding: 10px 0;
+  border-bottom: 1px solid #333;
+  display: flex;
+  align-items: center;
+}
+
+ul li::before {
+  content: "→";
+  color: var(--audi-red);
+  margin-right: 15px;
+  font-weight: bold;
+}
+
+
+footer {
+  text-align: center;
+  padding: 60px;
+  background: #000;
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+
+@media (max-width: 768px) {
+  header {
+    height: 60vh;
+  }
+
+  .block {
+    padding: 20px; text-align: center;
+  }
+
+  .block img {
+    box-shadow: 10px 10px 0px var(--audi-red);
+  }
 }
