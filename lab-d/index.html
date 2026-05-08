@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dawid Bednarz (57772) - PTW LAB D</title>
+
+    <link rel="stylesheet" href="styles.css" type="text/css">
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+    <h1>Jaka dzisiaj pogoda?</h1>
+
+    <div class="address-search">
+        <label for="address">Adres:</label>
+        <input type="text" id="address" name="address" placeholder="Wpisz adres...">
+        <button id="weatherBtn">Sprawdź</button>
+    </div>
+
+    <div class="weather-container">
+        <section class="todays-weather">
+            <h2>Dzisiejsza pogoda</h2>
+            <div id="todaysResult">
+
+            </div>
+        </section>
+
+        <section class="forecast-weather">
+            <h2>Pogoda w najbliższych dniach</h2>
+            <div id="forecastResult"></div>
+        </section>
+    </div>
+</body>
+</html>
